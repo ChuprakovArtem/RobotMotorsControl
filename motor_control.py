@@ -38,11 +38,13 @@ class StepperMotor:
         self.PIN_B2.value = w4
 
 if __name__ == '__main__':
-    from signal import pause
-
     motor1 = StepperMotor(A1=22, A2=27, B1=17, B2=18)
+    steps_per_revolution = 200  # Change this according to your motor's specification
+    half_revolution = steps_per_revolution // 2
+    delay_per_step = 5.0 / 1000  # Change the delay if needed
 
     while True:
-        motor1.forward(delay=5.0/1000, steps=512)
-        time.sleep(1)
-        pause()
+        motor1.forward(delay=delay_per_step, steps=half_revolution)  # Rotate 180 degrees forward
+        time.sleep(50)  # Wait for 50 seconds
+        motor1.backward(delay=delay_per_step, steps=half_revolution)  # Rotate 180 degrees backward
+        time.sleep(50)  # Wait for 50 seconds
