@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../r1_wiki_ws/src/robot_pkg/src"
+		},
+		{
+			"path": "../r1_wiki_ws/src/robot_pkg"
+		}
+	],
+	"settings": {}
+}
