@@ -39,12 +39,12 @@ class StepperMotor:
 
 if __name__ == '__main__':
     motor1 = StepperMotor(A1=22, A2=27, B1=17, B2=18)
-    steps_per_revolution = 200  # Change this according to your motor's specification
+    steps_per_revolution = 200  # Измените это в соответствии со спецификацией вашего двигателя
     half_revolution = steps_per_revolution // 2
-    delay_per_step = 5.0 / 1000  # Change the delay if needed
+    delay_per_step = 5.0 / 1000  # При необходимости измените задержку
 
     while True:
-        motor1.forward(delay=delay_per_step, steps=half_revolution)  # Rotate 180 degrees forward
-        time.sleep(50)  # Wait for 50 seconds
-        motor1.backward(delay=delay_per_step, steps=half_revolution)  # Rotate 180 degrees backward
-        time.sleep(50)  # Wait for 50 seconds
+        motor1.forward(delay=delay_per_step, steps=half_revolution)  # Повернитесь на 180 градусов вперед
+        time.sleep(50)  # Подождите 50 секунд
+        motor1.backward(delay=delay_per_step, steps=half_revolution)  # Поверните на 180 градусов назад
+        time.sleep(50)  #Подождите 50 секунд
